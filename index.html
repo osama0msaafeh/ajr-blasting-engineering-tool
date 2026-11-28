@@ -1587,7 +1587,7 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
   <nav class="tab-navigation" aria-label="Main Navigation">
     <div class="nav-container" role="tablist">
       <button class="nav-tab-btn active" data-tab="tab-drilling" id="btn-tab-drilling" role="tab" aria-selected="true" aria-controls="tab-drilling">
-        <span data-i18n="tab_drilling">Drilling Engineering</span> <span class="tab-count">42</span>
+        <span data-i18n="tab_drilling">Drilling Engineering</span> <span class="tab-count">47</span>
       </button>
       <button class="nav-tab-btn" data-tab="tab-blasting" id="btn-tab-blasting" role="tab" aria-selected="false" aria-controls="tab-blasting">
         <span data-i18n="tab_blasting">Blasting Engineering</span> <span class="tab-count">35</span>
@@ -1605,7 +1605,7 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
   <main class="master-main">
 
     <!-- =========================================================
-         TAB 1: DRILLING ENGINEERING (42 FORMULAS)
+         TAB 1: DRILLING ENGINEERING (47 FORMULAS)
          ========================================================= -->
     <section id="tab-drilling" class="tab-panel active" role="tabpanel" aria-labelledby="btn-tab-drilling">
       
@@ -1617,6 +1617,7 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
           <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-3" data-i18n="d_sec_3_nav">1.3 Thrust, Torque &amp; Bit Life (11-20)</button>
           <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-4" data-i18n="d_sec_4_nav">1.4 Cycle Times &amp; Rock Yield (25-37)</button>
           <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-5" data-i18n="d_sec_5_nav">1.5 Drilling Economics &amp; Costs (38-42)</button>
+          <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-6" data-fluid-nav>1.6 Drilling Flush Media</button>
         </div>
       </div>
 
@@ -2036,6 +2037,24 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
                   <div class="result-formula-box"><span class="result-formula">Power × EnergyPrice × LoadFactor</span></div>
                 </div>
               </div>
+            </section>
+          </div>
+        </div>
+
+        <div id="d-sec-6" class="sub-section">
+          <div class="section-banner"><div><h2 data-fluid-title>Drilling Flush Media</h2><p data-fluid-intro>Select the medium available on your rig. The tool calculates indicators for your selection and does not choose a medium for you.</p></div></div>
+          <div class="workstation-grid">
+            <aside class="card-panel">
+              <div class="panel-header-clean"><h3 data-fluid-selection-heading>Your selected medium</h3></div>
+              <div class="form-stack">
+                <div class="input-field-group"><div class="input-label-row"><label for="fluid-medium" data-fluid-select-label>Choose flushing medium</label></div><div class="input-wrap"><select id="fluid-medium"><option value="air">Dry compressed air</option><option value="water">Water injection</option><option value="mist">Air–water mist</option><option value="foam">Foam</option></select></div></div>
+                <div id="fluid-inputs" class="form-stack"></div>
+                <p data-fluid-note style="font-size:.82rem;color:var(--text-muted);line-height:1.6">Enter measured values from your rig and site. Follow the bit and equipment manufacturer limits and site dust-control procedures.</p>
+              </div>
+            </aside>
+            <section class="card-panel"><div class="panel-header-clean"><h3 data-fluid-results-heading>Calculated indicators for the selected medium</h3></div>
+              <div class="results-matrix" id="fluid-results"></div>
+              <p id="fluid-status" role="status" style="font-size:.82rem;color:var(--text-muted);margin-top:.8rem"></p>
             </section>
           </div>
         </div>
@@ -2951,17 +2970,17 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
     </section>
 
     <!-- =========================================================
-         TAB 4: FORMULA REFERENCE INDEX (FULL 77 FORMULAS)
+         TAB 4: FORMULA REFERENCE INDEX (FULL 82 FORMULAS)
          ========================================================= -->
     <section id="tab-reference" class="tab-panel" role="tabpanel" aria-labelledby="btn-tab-reference">
       <div class="card-panel">
         <div class="panel-header-clean">
-          <h3 data-i18n="tab_reference">Comprehensive Mathematical Formula Reference Index (77 Formulas)</h3>
+          <h3 data-i18n="tab_reference">Comprehensive Mathematical Formula Reference Index (82 Formulas)</h3>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
           
           <div>
-            <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--primary-accent); margin-bottom: 0.75rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--border-default);">1. Drilling Engineering System (42 Formulas)</h4>
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--primary-accent); margin-bottom: 0.75rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--border-default);">1. Drilling Engineering System (47 Formulas)</h4>
             <ol style="padding-left: 1.5rem; padding-right: 1.5rem; font-size: 0.8rem; line-height: 1.8; color: var(--text-secondary);">
 <li><strong>Percussive Stress on Bit:</strong> <code>σp = ρ · c · v</code></li>
 <li><strong>Rotary Bit Optimum Speed:</strong> <code>RV = 1.66 × PR</code></li>
@@ -3005,6 +3024,11 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
 <li><strong>Interest &amp; Insurance Cost:</strong> <code>CI = [(N+1)/2N × Price × %] / Hours</code></li>
 <li><strong>Maintenance Hourly Cost:</strong> <code>CM = Price × MaintenanceRate</code></li>
 <li><strong>Fuel &amp; Power Operational Cost:</strong> <code>Cost = Power × EnergyPrice × LoadFactor</code></li>
+<li data-fluid-index="annular"><strong>Annular Flow Area:</strong> <code>Aₐ = π/4 (Dₕ² − Dₚ²)</code></li>
+<li data-fluid-index="velocity"><strong>Mean Annular Air Velocity:</strong> <code>Vₐ = Qₐ / Aₐ</code> (use actual flow at hole conditions)</li>
+<li data-fluid-index="water"><strong>Water Consumption per Drilled Length:</strong> <code>Cw = 60 Qw / ROP</code> (Qw in L/min; ROP in m/h; result in L/m)</li>
+<li data-fluid-index="ratio"><strong>Water-to-Air Volumetric Ratio:</strong> <code>Rw/a = Qw / Qa</code> (convert both flows to matching units/conditions)</li>
+<li data-fluid-index="foam"><strong>Foam Quality:</strong> <code>β = Qg / (Qg + Ql) × 100%</code> (gas and liquid flows at matching pressure/temperature)</li>
 </ol>
           </div>
 
@@ -3094,7 +3118,7 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
   (function () {
 /**
  * AJR Blast Core — Internationalization Engine (English Default)
- * Comprehensive English Dictionaries + Detailed Engineering Tooltips for all 77 Formulas
+ * Comprehensive English Dictionaries + Detailed Engineering Tooltips for all 82 Formulas
  */
 (function (window) {
   'use strict';
@@ -5334,7 +5358,7 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
   (function () {
 /**
  * Master Application Controller — AJR Blast Core Platform
- * Synchronizes UI, Calculations for all 77 Formulas, Explosive-Coupled Network Simulator,
+ * Synchronizes UI, Calculations for all 82 Formulas, Explosive-Coupled Network Simulator,
  * Interactive CAD Diagrams, Tooltips Engine, Day/Night Theme, and Export/Share Actions.
  */
 (function () {
@@ -7792,6 +7816,93 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
   </script>
 
 <script>(function(){var host=document.getElementById('d-sec-1');if(!host||document.getElementById('bit-specific-panel'))return;var ar=(function(){try{return localStorage.getItem('ajr_lang_v2')==='ar'}catch(e){return false}})();var bitInputValues={};var bitUnitSystem=(function(){try{return localStorage.getItem('ajr_unit_system')==='imperial'?'imperial':'metric'}catch(e){return 'metric'}})();var bitUnitFactors={diameter:1/25.4,wob:224.808943,rpm:1,torque:0.737562149,rop:3.280839895,ucs:145.037738,pressure:145.037738,area:0.15500031,stroke:1/25.4,blows:1,flow:35.3146667,cutters:1,nozzles:1,cones:1,bearing:1,blades:1};var bitUnitLabels={diameter:['mm','in'],wob:['kN','lb'],rpm:['rpm','rpm'],torque:['N·m','ft·lbf'],rop:['m/h','ft/h'],ucs:['MPa','psi'],pressure:['MPa','psi'],area:['cm²','in²'],stroke:['mm','in'],blows:['blows/min','blows/min'],flow:['m³/min','CFM'],cutters:['count','count'],nozzles:['count','count'],cones:['count','count'],bearing:['',''],blades:['count','count']};function bitToMetric(k,n){return bitUnitSystem==='imperial'?n/(bitUnitFactors[k]||1):n}function bitFromMetric(k,n,sys){return sys==='imperial'?n*(bitUnitFactors[k]||1):n}function bitUnit(k,fallback){var a=bitUnitLabels[k];return a?a[bitUnitSystem==='imperial'?1:0]:fallback}function bitDefault(k,n){return Number(bitFromMetric(k,n,bitUnitSystem).toPrecision(8))}var panel=document.createElement('section');var impactVelocityField=host.querySelector('[data-tip="p_d_impact_v"]'),impactVelocityMarker=null;if(impactVelocityField){impactVelocityMarker=document.createComment('dth-impact-velocity-position');impactVelocityField.parentNode.insertBefore(impactVelocityMarker,impactVelocityField);}panel.id='bit-specific-panel';panel.style.cssText='margin:18px 0;padding:18px;border:1px solid var(--border-default);border-radius:14px;background:var(--bg-surface);color:var(--text-main)';panel.innerHTML='<h2 id="bt" style="color:var(--primary-accent)"></h2><p id="bd"></p><label id="bl" for="btype"></label><select id="btype" style="display:block;width:100%;padding:12px;margin:8px 0;background:var(--bg-input);color:var(--text-main);border:1px solid var(--border-default);border-radius:8px"><option value="pdc">PDC</option><option value="tricone">Tricone / Roller Cone</option><option value="drag">Drag / Blade</option><option value="dth">DTH Hammer Bit</option></select><div id="bi" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:16px 0"></div><div id="br" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px"></div><p id="bn" style="font-size:.85em;opacity:.8;margin-top:14px"></p>';var drillForm=host.querySelector('.workstation-grid aside.card-panel .form-stack');if(drillForm){drillForm.appendChild(panel);panel.style.cssText='margin-top:14px;padding-top:14px;border-top:1px solid var(--border-default);color:var(--text-main)'}else host.prepend(panel);var defs={pdc:[['diameter','Bit diameter','mm',216],['wob','Weight on bit (WOB)','kN',100],['rpm','Rotary speed','rpm',120],['torque','Torque','N·m',12000],['rop','Measured penetration rate','m/h',20],['ucs','Rock UCS','MPa',100],['cutters','Cutter count','count',30],['nozzles','Nozzle count','count',6]],tricone:[['diameter','Bit diameter','mm',216],['wob','Weight on bit (WOB)','kN',120],['rpm','Rotary speed','rpm',80],['torque','Torque','N·m',14000],['rop','Measured penetration rate','m/h',12],['ucs','Rock UCS','MPa',100],['cones','Number of cones','count',3],['bearing','Bearing design reference','',0]],drag:[['diameter','Bit diameter','mm',216],['wob','Weight on bit (WOB)','kN',60],['rpm','Rotary speed','rpm',180],['torque','Torque','N·m',7000],['rop','Measured penetration rate','m/h',25],['ucs','Rock UCS','MPa',40],['blades','Blade count','count',5],['cutters','Cutter count','count',50]],dth:[['diameter','Bit diameter','mm',165],['pressure','Net air pressure','MPa',1.7],['area','Effective piston area','cm²',30],['stroke','Hammer stroke','mm',80],['blows','Impact frequency','blows/min',1200],['rop','Measured penetration rate','m/h',15],['flow','Air flow','m³/min',18],['ucs','Rock UCS','MPa',100]]};var arLabels={diameter:'قطر اللقمة',wob:'الوزن على اللقمة WOB',rpm:'سرعة الدوران',torque:'عزم الدوران',rop:'معدل الاختراق المقاس',ucs:'مقاومة ضغط الصخر UCS',cutters:'عدد القواطع',nozzles:'عدد الفوهات',cones:'عدد المخاريط',bearing:'تصميم المحمل (مرجعي)',blades:'عدد الشفرات',pressure:'ضغط الهواء الصافي',area:'مساحة المكبس الفعالة',stroke:'شوط المطرقة',blows:'تردد الضربات',flow:'تدفق الهواء'};var enLabels={diameter:'Bit diameter',wob:'Weight on bit (WOB)',rpm:'Rotary speed',torque:'Torque',rop:'Measured penetration rate',ucs:'Rock UCS',cutters:'Cutter count',nozzles:'Nozzle count',cones:'Cone count',bearing:'Bearing design reference',blades:'Blade count',pressure:'Net air pressure',area:'Effective piston area',stroke:'Hammer stroke',blows:'Impact frequency',flow:'Air flow'};function f(n){return Number.isFinite(n)?n.toLocaleString(ar?'ar':'en',{maximumFractionDigits:2}):'—'}function render(){var oldInputs=document.querySelectorAll('#bi input');oldInputs.forEach(function(x){bitInputValues[x.dataset.k]=x.value});var t=document.getElementById('btype').value;document.getElementById('bt').textContent=ar?'حاسبة الحفر بحسب نوع اللقمة':'Bit-specific drilling calculator';document.getElementById('bd').textContent=ar?'اختر نوع اللقمة لتظهر المدخلات والمؤشرات الخاصة بتصميمها وآلية عملها.':'Select a bit to show only its design and operating inputs.';document.getElementById('bl').textContent=ar?'نوع لقمة الحفر':'Drill bit type';document.getElementById('bn').textContent=ar?'القيم الافتراضية للتوضيح فقط. المؤشرات أولية وتعتمد على بيانات ميدانية صحيحة ومعايرة؛ اتبع حدود المصنع ومراجعة مهندس الموقع.':'Defaults are illustrative. Indicators require valid field data and calibration; follow manufacturer limits and site engineering review.';var ih=document.getElementById('bi');ih.innerHTML=defs[t].map(function(d){return '<label style="display:block;font-size:.9em">'+(ar?arLabels[d[0]]:enLabels[d[0]])+' ('+bitUnit(d[0],d[2])+')<input data-k="'+d[0]+'" type="number" step="any" value="'+(bitInputValues[d[0]]!==undefined?bitInputValues[d[0]]:bitDefault(d[0],d[3]))+'" style="display:block;box-sizing:border-box;width:100%;margin-top:5px;padding:10px;background:var(--bg-input);color:var(--text-main);border:1px solid var(--border-default);border-radius:8px"></label>'}).join('');ih.querySelectorAll('input').forEach(function(x){x.addEventListener('input',calc)});if(impactVelocityField){if(t==='dth'){impactVelocityField.style.display='';ih.appendChild(impactVelocityField)}else if(impactVelocityMarker&&impactVelocityMarker.parentNode){impactVelocityMarker.parentNode.insertBefore(impactVelocityField,impactVelocityMarker.nextSibling);impactVelocityField.style.display='none'}}var impactExtraIds=['d-extra-p','d-extra-d','d-extra-rc','d-extra-eg','d-extra-ng','d-extra-lf','d-extra-ip'];impactExtraIds.forEach(function(id){var field=host.querySelector('#'+id),group=field&&field.closest('.input-field-group');if(!group)return;if(!group._dthImpactMarker){group._dthImpactMarker=document.createComment('dth-'+id);group.parentNode.insertBefore(group._dthImpactMarker,group)}if(t==='dth'){ih.appendChild(group);group.style.removeProperty('display')}else if(group._dthImpactMarker.parentNode){group._dthImpactMarker.parentNode.insertBefore(group,group._dthImpactMarker.nextSibling);group.style.setProperty('display','none','important')}});var impactResultIds=['d_1','d_5','d_6'];impactResultIds.forEach(function(id){var card=host.querySelector('.results-matrix [data-tip="'+id+'"]');if(card)card.style.display=t==='dth'?'':'none'});var rotaryResultIds=['d_2','d_3','d_4','d_21','d_22','d_23','d_24'];rotaryResultIds.forEach(function(id){var card=host.querySelector('.results-matrix [data-tip="'+id+'"]');if(card)card.style.display=t==='dth'?'none':''});calc()}function calc(){var t=document.getElementById('btype').value;var v={};document.querySelectorAll('#bi input').forEach(function(x){v[x.dataset.k]=Number(x.value)});var D=bitToMetric('diameter',v.diameter||0),R=bitToMetric('rop',v.rop||0),W=bitToMetric('wob',v.wob||0),T=bitToMetric('torque',v.torque||0),U=bitToMetric('ucs',v.ucs||0),c=[];function add(a,b,n,u,q){if(!ar&&b==='Entered rock UCS')q='Geological input; not a penetration-rate prediction';c.push('<div style="padding:12px;border:1px solid var(--border-default);border-radius:10px;background:var(--bg-surface-elevated)"><b>'+(ar?a:b)+'</b><div style="font-size:1.2em;margin:8px 0">'+f(n)+' '+u+'</div><small>'+q+'</small></div>')}if(v.pressure){var E=bitToMetric('pressure',v.pressure)*1e6*bitToMetric('area',v.area)*1e-4*bitToMetric('stroke',v.stroke)*1e-3;add('طاقة الضربة النظرية','Theoretical impact energy',bitUnitSystem==='metric'?E:E*0.737562149,bitUnitSystem==='metric'?'J':'ft·lbf',bitUnitSystem==='metric'?'E ≈ P × A × s':'E ≈ P × A × s ÷ 12');add('قدرة الضربات النظرية','Theoretical impact power',bitUnitSystem==='metric'?E*v.blows/60000:E*v.blows/60000*1.34102209,bitUnitSystem==='metric'?'kW':'HP','E × impacts/s');add('التقدم المقاس لكل ضربة','Measured advance per impact',v.blows?(bitUnitSystem==='metric'?R*1000/(60*v.blows):R*3.280839895*12/(60*v.blows)):NaN,bitUnitSystem==='metric'?'mm/impact':'in/impact','ROP / impacts per minute');add('تدفق الهواء المدخل','Entered air flow',bitUnitSystem==='metric'?bitToMetric('flow',v.flow):v.flow,bitUnitSystem==='metric'?'m³/min':'CFM','Hammer specification comparison')}else{var A=Math.PI*(D/1000)**2/4,m=R>0?((W*1000/A)+(2*Math.PI*(v.rpm/60)*T/(A*(R/3600))))/1e6:NaN;add('مساحة مقطع البئر','Borehole area',bitUnitSystem==='metric'?A*1e4:A*1550.0031,bitUnitSystem==='metric'?'cm²':'in²','A = πD²/4');add('الطاقة النوعية الميكانيكية MSE','Mechanical specific energy (MSE)',bitUnitSystem==='metric'?m:m*145.037738,bitUnitSystem==='metric'?'MPa':'psi','MSE=(WOB/A + 2πNT/(A·ROP))');add('عمق القطع المقاس لكل دورة','Measured depth of cut per revolution',v.rpm?(bitUnitSystem==='metric'?R*1000/(60*v.rpm):R*3.280839895*12/(60*v.rpm)):NaN,bitUnitSystem==='metric'?'mm/rev':'in/rev','DOC=ROP/(60×RPM)');add('مقاومة الصخر المدخلة','Entered rock UCS',bitUnitSystem==='metric'?U:U*145.037738,bitUnit('ucs','MPa'),'مدخل جيولوجي، لا يمثل تنبؤًا بمعدل الحفر');if(t==='pdc')add('كثافة القواطع التقريبية','Approximate cutter density',D?v.cutters/(D/25.4):NaN,'cutters/in','count ÷ bit diameter (in)');if(t==='tricone')add('حمل WOB على مساحة الوجه','WOB per projected face area',bitUnitSystem==='metric'?(A?W*1000/A/1e6:NaN):(A?W*1000/A/1e6*145.037738:NaN),bitUnitSystem==='metric'?'MPa':'psi','WOB ÷ projected bit area');if(t==='drag')add('عدد الشفرات','Blade count',v.blades,'count','Design descriptor')}document.getElementById('br').innerHTML=c.join('')}document.getElementById('btype').addEventListener('change',render);window.addEventListener('languageChanged',function(e){ar=!!(e.detail&&e.detail.lang==='ar');render()});var unitSelect=document.getElementById('unit-system-select');if(unitSelect)unitSelect.addEventListener('change',function(){var next=unitSelect.value==='imperial'?'imperial':'metric';if(next===bitUnitSystem)return;document.querySelectorAll('#bi input').forEach(function(x){bitInputValues[x.dataset.k]=x.value});Object.keys(bitInputValues).forEach(function(k){var n=Number(bitInputValues[k]),factor=bitUnitFactors[k]||1;if(Number.isFinite(n))bitInputValues[k]=String(Number((next==='imperial'?n*factor:n/factor).toPrecision(8)))});bitUnitSystem=next;document.querySelectorAll('#bi input').forEach(function(x){x.value=bitInputValues[x.dataset.k]});render()});render()})();</script>
+<script>
+(function(){
+  const select=document.getElementById('fluid-medium'), inputHost=document.getElementById('fluid-inputs'), output=document.getElementById('fluid-results'), status=document.getElementById('fluid-status');
+  if(!select||!inputHost||!output)return;
+  let lang=(localStorage.getItem('ajr_lang_v2')==='ar'?'ar':'en');
+  let units=(localStorage.getItem('ajr_unit_system')==='imperial'?'imperial':'metric');
+  const saved={};
+  const indexText={
+    annular:{en:'<strong>Annular Flow Area:</strong> <code>Aₐ = π/4 (Dₕ² − Dₚ²)</code>',ar:'<strong>مساحة المقطع الحلقي:</strong> <code>Aₐ = π/4 (Dₕ² − Dₚ²)</code>'},
+    velocity:{en:'<strong>Mean Annular Air Velocity:</strong> <code>Vₐ = Qₐ / Aₐ</code> (use actual flow at hole conditions)',ar:'<strong>متوسط سرعة الهواء الحلقية:</strong> <code>Vₐ = Qₐ / Aₐ</code> (يُستخدم تدفق الهواء الفعلي عند ظروف الثقب)'},
+    water:{en:'<strong>Water Consumption per Drilled Length:</strong> <code>Cw = 60 Qw / ROP</code> (Qw in L/min; ROP in m/h; result in L/m)',ar:'<strong>استهلاك الماء لكل طول محفور:</strong> <code>Cw = 60 Qw / ROP</code> (Qw باللتر/دقيقة؛ ROP بالمتر/ساعة؛ الناتج لتر/متر)'},
+    ratio:{en:'<strong>Water-to-Air Volumetric Ratio:</strong> <code>Rw/a = Qw / Qa</code> (convert both flows to matching units/conditions)',ar:'<strong>النسبة الحجمية للماء إلى الهواء:</strong> <code>Rw/a = Qw / Qa</code> (وحّد وحدات وظروف قياس التدفقين)'},
+    foam:{en:'<strong>Foam Quality:</strong> <code>β = Qg / (Qg + Ql) × 100%</code> (gas and liquid flows at matching pressure/temperature)',ar:'<strong>جودة الرغوة:</strong> <code>β = Qg / (Qg + Ql) × 100%</code> (قِس تدفقي الغاز والسائل عند ضغط وحرارة متماثلين)'}
+  };
+  const labels={
+    air:{en:['Dry compressed air','Borehole diameter','Drill-pipe outside diameter','Air flow at hole conditions','Measured penetration rate'],ar:['هواء مضغوط جاف','قطر الثقب','القطر الخارجي لأنبوب الحفر','تدفق الهواء عند ظروف الثقب','معدل الاختراق المقاس']},
+    water:{en:['Water injection','Borehole diameter','Drill-pipe outside diameter','Water injection rate','Measured penetration rate'],ar:['حقن الماء','قطر الثقب','القطر الخارجي لأنبوب الحفر','معدل حقن الماء','معدل الاختراق المقاس']},
+    mist:{en:['Air–water mist','Borehole diameter','Drill-pipe outside diameter','Air flow at hole conditions','Water injection rate','Measured penetration rate'],ar:['رذاذ ماء وهواء','قطر الثقب','القطر الخارجي لأنبوب الحفر','تدفق الهواء عند ظروف الثقب','معدل حقن الماء','معدل الاختراق المقاس']},
+    foam:{en:['Foam','Borehole diameter','Drill-pipe outside diameter','Gas flow at foam mixing conditions','Liquid flow at foam mixing conditions','Measured penetration rate'],ar:['الرغوة','قطر الثقب','القطر الخارجي لأنبوب الحفر','تدفق الغاز عند ظروف خلط الرغوة','تدفق السائل عند ظروف خلط الرغوة','معدل الاختراق المقاس']}
+  };
+  const defs={
+    air:[['hole','m','in'],['pipe','m','in'],['air','m³/min','CFM'],['rop','m/h','ft/h']],
+    water:[['hole','m','in'],['pipe','m','in'],['water','L/min','US gal/min'],['rop','m/h','ft/h']],
+    mist:[['hole','m','in'],['pipe','m','in'],['air','m³/min','CFM'],['water','L/min','US gal/min'],['rop','m/h','ft/h']],
+    foam:[['hole','m','in'],['pipe','m','in'],['gas','m³/min','CFM'],['liquid','L/min','US gal/min'],['rop','m/h','ft/h']]
+  };
+  const enNames={air:'Dry compressed air',water:'Water injection',mist:'Air–water mist',foam:'Foam'};
+  const arNames={air:'هواء مضغوط جاف',water:'حقن الماء',mist:'رذاذ ماء وهواء',foam:'الرغوة'};
+  function factor(k){return ({hole:1/0.0254,pipe:1/0.0254,air:35.3146667,gas:35.3146667,water:0.264172052,liquid:0.264172052,rop:3.280839895})[k]||1}
+  function toMetric(k,v){if(units==='metric')return v;return v/factor(k)}
+  function showUnits(k){return defs[select.value].find(x=>x[0]===k)?.[units==='imperial'?2:1]||''}
+  function fmt(n,d=3){return Number.isFinite(n)?n.toLocaleString(lang==='ar'?'ar-JO':'en-US',{maximumFractionDigits:d}):'—'}
+  function makeInput(k,idx){const name=labels[select.value][lang][idx+1];const value=saved[select.value]?.[k]??'';return '<div class="input-field-group"><div class="input-label-row"><label for="fluid-'+k+'">'+name+'</label></div><div class="input-wrap"><input id="fluid-'+k+'" data-fluid-key="'+k+'" type="number" min="0" step="any" value="'+value+'"><span class="input-unit">'+showUnits(k)+'</span></div></div>'}
+  function card(title,value,unit,formula,meaning){return '<div class="result-card"><div class="result-card-header"><span class="result-title">'+title+'</span></div><div class="result-display"><span class="result-value">'+value+'</span><span class="result-unit">'+unit+'</span></div><div class="result-formula-box"><span class="result-formula">'+formula+'</span></div><small style="display:block;margin-top:.55rem;color:var(--text-muted);line-height:1.5">'+meaning+'</small></div>'}
+  function render(){
+    const t=select.value, names=lang==='ar'?arNames:enNames;
+    document.querySelector('[data-fluid-nav]').textContent=lang==='ar'?'1.6 وسائط تنظيف ثقب الحفر':'1.6 Drilling Flush Media';
+    document.querySelectorAll('[data-fluid-index]').forEach(el=>{const item=indexText[el.dataset.fluidIndex];if(item)el.innerHTML=item[lang]});
+    document.querySelector('[data-fluid-title]').textContent=lang==='ar'?'وسائط تنظيف ثقب الحفر':'Drilling Flush Media';
+    document.querySelector('[data-fluid-intro]').textContent=lang==='ar'?'اختر بنفسك الوسط المتوفر والمتوافق مع جهازك. تحسب الأداة مؤشرات اختيارك ولا تقترح وسطًا بدلًا عنك.':'Choose the medium available and compatible with your rig. The tool calculates indicators for your selection and does not recommend a medium.';
+    document.querySelector('[data-fluid-selection-heading]').textContent=lang==='ar'?'الوسط الذي اخترته':'Your selected medium';
+    document.querySelector('[data-fluid-select-label]').textContent=lang==='ar'?'اختر وسط تنظيف الثقب':'Choose flushing medium';
+    document.querySelector('[data-fluid-results-heading]').textContent=lang==='ar'?'المؤشرات المحسوبة للوسط المختار':'Calculated indicators for the selected medium';
+    document.querySelector('[data-fluid-note]').textContent=lang==='ar'?'أدخل قياسات فعلية من جهازك وموقعك. تدفق الهواء للحساب يجب أن يكون عند ظروف الثقب الفعلية؛ واتبع حدود اللقمة والمعدة وإجراءات التحكم بالغبار في الموقع.':'Enter measured values from your rig and site. Airflow calculations require actual flow at borehole conditions; follow bit and equipment limits and site dust-control procedures.';
+    Array.from(select.options).forEach(o=>o.textContent=names[o.value]);
+    inputHost.innerHTML=defs[t].map((d,i)=>makeInput(d[0],i)).join('');
+    inputHost.querySelectorAll('input').forEach(x=>x.addEventListener('input',calculate));
+    calculate();
+  }
+  function calculate(){
+    const t=select.value,v={};inputHost.querySelectorAll('input').forEach(x=>{(saved[t]||(saved[t]={}))[x.dataset.fluidKey]=x.value;v[x.dataset.fluidKey]=x.value===''?NaN:toMetric(x.dataset.fluidKey,Number(x.value))});
+    const D=v.hole,dp=v.pipe,rop=v.rop,ann=(D>dp&&dp>0)?Math.PI/4*(D*D-dp*dp):NaN;
+    const validArea=Number.isFinite(ann)&&ann>0;
+    const missing=lang==='ar'?'أدخل القيم المطلوبة، واجعل قطر الثقب أكبر من القطر الخارجي للأنبوب.':'Enter the required values; borehole diameter must exceed drill-pipe outside diameter.';
+    const cards=[];
+    if(t==='air'){
+      const va=validArea&&v.air>0?v.air/60/ann:NaN;
+      cards.push(card(lang==='ar'?'مساحة المقطع الحلقي':'Annular flow area',fmt(units==='metric'?ann:ann*1550.0031),units==='metric'?'m²':'in²','Aₐ = π/4 (Dₕ² − Dₚ²)',lang==='ar'?'المساحة المتاحة لمرور الهواء والفتات حول أنبوب الحفر.':'Available cross-sectional area for air and cuttings around the drill pipe.'));
+      cards.push(card(lang==='ar'?'متوسط سرعة الهواء الحلقية':'Mean annular air velocity',fmt(units==='metric'?va:va*3.280839895),units==='metric'?'m/s':'ft/s','Vₐ = Qₐ / Aₐ',lang==='ar'?'استخدم تدفق الهواء الفعلي عند ظروف الثقب، لا قيمة التدفق القياسية دون تصحيح.':'Use actual airflow at hole conditions, not an uncorrected standard flow rate.'));
+    } else if(t==='water'){
+      const consumption=Number.isFinite(rop)&&rop>0&&Number.isFinite(v.water)?v.water*60/rop:NaN;
+      cards.push(card(lang==='ar'?'استهلاك الماء لكل طول محفور':'Water use per drilled length',fmt(units==='metric'?consumption:consumption*0.0805167),units==='metric'?'L/m':'US gal/ft','Cw = 60 Qw / ROP',lang==='ar'?'مؤشر وصفي من معدل الحقن ومعدل الاختراق المقاسين؛ ليس قيمة ضبط موصى بها.':'Descriptive ratio of measured injection rate to measured penetration rate; not a recommended setpoint.'));
+      cards.push(card(lang==='ar'?'معدل حقن الماء المدخل':'Entered water injection rate',fmt(Number(inputHost.querySelector('#fluid-water')?.value)),showUnits('water'),'Qw (measured)',lang==='ar'?'يعرض قيمة الموقع كما أدخلتها.':'Displays the site value you entered.'));
+    } else if(t==='mist'){
+      const ratio=Number.isFinite(v.water)&&Number.isFinite(v.air)&&v.air>0?v.water/(v.air*1000):NaN;
+      const consumption=Number.isFinite(rop)&&rop>0&&Number.isFinite(v.water)?v.water*60/rop:NaN;
+      cards.push(card(lang==='ar'?'نسبة الماء إلى الهواء حجميًا':'Water-to-air volumetric ratio',fmt(ratio*100,4),'%','Rw/a = Qw / (1000 Qa) × 100',lang==='ar'?'يجب أن يكون تدفق الهواء فعليًا عند ظروف الثقب؛ النسبة للمقارنة وليست ضبطًا مستهدفًا.':'Airflow must be actual at hole conditions; this ratio is comparative, not a target setting.'));
+      cards.push(card(lang==='ar'?'استهلاك الماء لكل طول محفور':'Water use per drilled length',fmt(units==='metric'?consumption:consumption*0.0805167),units==='metric'?'L/m':'US gal/ft','Cw = 60 Qw / ROP',lang==='ar'?'ناتج من معدل الحقن والاختراق المدخلين.':'Calculated from entered injection rate and penetration rate.'));
+      cards.push(card(lang==='ar'?'مساحة المقطع الحلقي':'Annular flow area',fmt(units==='metric'?ann:ann*1550.0031),units==='metric'?'m²':'in²','Aₐ = π/4 (Dₕ² − Dₚ²)',lang==='ar'?'المساحة بين جدار الثقب وأنبوب الحفر.':'Area between the borehole wall and drill pipe.'));
+    } else {
+      const g=v.gas*1000, l=v.liquid, quality=(Number.isFinite(g)&&Number.isFinite(l)&&g+l>0)?100*g/(g+l):NaN;
+      const consumption=Number.isFinite(rop)&&rop>0&&Number.isFinite(l)?l*60/rop:NaN;
+      cards.push(card(lang==='ar'?'جودة الرغوة الحجمية':'Foam quality by volume',fmt(quality,2),'%','β = Qg / (Qg + Ql) × 100%',lang==='ar'?'احسبها بتدفقات الغاز والسائل عند ضغط وحرارة متطابقين.':'Use gas and liquid flow rates at the same pressure and temperature.'));
+      cards.push(card(lang==='ar'?'استهلاك السائل لكل طول محفور':'Liquid use per drilled length',fmt(units==='metric'?consumption:consumption*0.0805167),units==='metric'?'L/m':'US gal/ft','Cl = 60 Ql / ROP',lang==='ar'?'مؤشر مبني على التدفق ومعدل الاختراق المقاسين.':'Based on measured liquid flow and penetration rate.'));
+      cards.push(card(lang==='ar'?'مساحة المقطع الحلقي':'Annular flow area',fmt(units==='metric'?ann:ann*1550.0031),units==='metric'?'m²':'in²','Aₐ = π/4 (Dₕ² − Dₚ²)',lang==='ar'?'المساحة بين جدار الثقب وأنبوب الحفر.':'Area between the borehole wall and drill pipe.'));
+    }
+    output.innerHTML=cards.join('');
+    const required=defs[t].every(x=>Number.isFinite(v[x[0]])&&v[x[0]]>0);
+    status.textContent=required&& (t==='air'?validArea&&v.air>0:validArea)?'':missing;
+  }
+  select.addEventListener('change',render);
+  window.addEventListener('languageChanged',e=>{lang=e.detail?.lang==='ar'?'ar':'en';render()});
+  const unitSelect=document.getElementById('unit-system-select');
+  if(unitSelect)unitSelect.addEventListener('change',()=>{const next=unitSelect.value==='imperial'?'imperial':'metric';if(next===units)return;Object.keys(saved).forEach(type=>Object.keys(saved[type]).forEach(k=>{if(saved[type][k]==='')return;const numeric=Number(saved[type][k]);saved[type][k]=String(Number((next==='imperial'?numeric*factor(k):numeric/factor(k)).toPrecision(8)))}));units=next;render()});
+  render();
+})();
+</script>
 </body></html>
 
 
