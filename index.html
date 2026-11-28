@@ -1613,11 +1613,10 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
       <div class="sub-nav">
         <div class="sub-nav-container">
           <button class="sub-nav-btn active" data-group="drilling-sections" data-section="d-sec-1" data-i18n="d_sec_1_nav">1.1 Penetration &amp; Mechanics (1-6, 21-24)</button>
-          <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-2" data-i18n="d_sec_2_nav">1.2 Air Flushing &amp; Cleaning (7-10)</button>
+          <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-2" data-i18n="d_sec_2_nav" data-fluid-nav>1.2 Flushing Systems &amp; Hole Cleaning (7-10)</button>
           <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-3" data-i18n="d_sec_3_nav">1.3 Thrust, Torque &amp; Bit Life (11-20)</button>
           <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-4" data-i18n="d_sec_4_nav">1.4 Cycle Times &amp; Rock Yield (25-37)</button>
           <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-5" data-i18n="d_sec_5_nav">1.5 Drilling Economics &amp; Costs (38-42)</button>
-          <button class="sub-nav-btn" data-group="drilling-sections" data-section="d-sec-6" data-fluid-nav>1.6 Drilling Flush Media</button>
         </div>
       </div>
 
@@ -1726,8 +1725,8 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
         <div id="d-sec-2" class="sub-section">
           <div class="section-banner">
             <div>
-              <h2 data-i18n="d_sec_2_title">Hole Cleaning &amp; Air Flushing Velocity</h2>
-              <p data-i18n="d_sec_2_desc">Minimum flushing air velocity, volume flow, and geometric borehole ratios (Formulas 7-10)</p>
+              <h2 data-i18n="d_sec_2_title" data-fluid-section-title>Flushing Systems, Hole Cleaning &amp; Media Selection</h2>
+              <p data-i18n="d_sec_2_desc" data-fluid-section-desc>Air velocity, airflow, hole-cleaning geometry, and selection indicators for the flushing medium available on site (Formulas 7-10)</p>
             </div>
           </div>
           <div class="workstation-grid">
@@ -1778,6 +1777,24 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
               </div>
             </section>
           </div>
+          <div class="card-panel" style="margin-top:1.15rem">
+          <div class="panel-header-clean"><h3 data-fluid-title>Drilling Flush Medium Selection</h3></div>
+          <p data-fluid-intro style="margin:-.25rem 0 1rem;color:var(--text-muted);line-height:1.6">Select the medium available and compatible with your rig. The tool calculates indicators for your selection and does not choose a medium for you.</p>
+          <div class="workstation-grid">
+            <aside class="card-panel">
+              <div class="panel-header-clean"><h3 data-fluid-selection-heading>Your selected medium</h3></div>
+              <div class="form-stack">
+                <div class="input-field-group"><div class="input-label-row"><label for="fluid-medium" data-fluid-select-label>Choose flushing medium</label></div><div class="input-wrap"><select id="fluid-medium"><option value="air">Dry compressed air</option><option value="water">Water injection</option><option value="mist">Air–water mist</option><option value="foam">Foam</option></select></div></div>
+                <div id="fluid-inputs" class="form-stack"></div>
+                <p data-fluid-note style="font-size:.82rem;color:var(--text-muted);line-height:1.6">Enter measured values from your rig and site. Follow the bit and equipment manufacturer limits and site dust-control procedures.</p>
+              </div>
+            </aside>
+            <section class="card-panel"><div class="panel-header-clean"><h3 data-fluid-results-heading>Calculated indicators for the selected medium</h3></div>
+              <div class="results-matrix" id="fluid-results"></div>
+              <p id="fluid-status" role="status" style="font-size:.82rem;color:var(--text-muted);margin-top:.8rem"></p>
+            </section>
+          </div>
+        </div>
         </div>
 
         <!-- 1.3: Thrust, Torque & Bit Life -->
@@ -2041,23 +2058,6 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
           </div>
         </div>
 
-        <div id="d-sec-6" class="sub-section">
-          <div class="section-banner"><div><h2 data-fluid-title>Drilling Flush Media</h2><p data-fluid-intro>Select the medium available on your rig. The tool calculates indicators for your selection and does not choose a medium for you.</p></div></div>
-          <div class="workstation-grid">
-            <aside class="card-panel">
-              <div class="panel-header-clean"><h3 data-fluid-selection-heading>Your selected medium</h3></div>
-              <div class="form-stack">
-                <div class="input-field-group"><div class="input-label-row"><label for="fluid-medium" data-fluid-select-label>Choose flushing medium</label></div><div class="input-wrap"><select id="fluid-medium"><option value="air">Dry compressed air</option><option value="water">Water injection</option><option value="mist">Air–water mist</option><option value="foam">Foam</option></select></div></div>
-                <div id="fluid-inputs" class="form-stack"></div>
-                <p data-fluid-note style="font-size:.82rem;color:var(--text-muted);line-height:1.6">Enter measured values from your rig and site. Follow the bit and equipment manufacturer limits and site dust-control procedures.</p>
-              </div>
-            </aside>
-            <section class="card-panel"><div class="panel-header-clean"><h3 data-fluid-results-heading>Calculated indicators for the selected medium</h3></div>
-              <div class="results-matrix" id="fluid-results"></div>
-              <p id="fluid-status" role="status" style="font-size:.82rem;color:var(--text-muted);margin-top:.8rem"></p>
-            </section>
-          </div>
-        </div>
 
       </div>
     </section>
@@ -7852,9 +7852,11 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
   function card(title,value,unit,formula,meaning){return '<div class="result-card"><div class="result-card-header"><span class="result-title">'+title+'</span></div><div class="result-display"><span class="result-value">'+value+'</span><span class="result-unit">'+unit+'</span></div><div class="result-formula-box"><span class="result-formula">'+formula+'</span></div><small style="display:block;margin-top:.55rem;color:var(--text-muted);line-height:1.5">'+meaning+'</small></div>'}
   function render(){
     const t=select.value, names=lang==='ar'?arNames:enNames;
-    document.querySelector('[data-fluid-nav]').textContent=lang==='ar'?'1.6 وسائط تنظيف ثقب الحفر':'1.6 Drilling Flush Media';
+    document.querySelector('[data-fluid-nav]').textContent=lang==='ar'?'1.2 أنظمة تنظيف الحفرة ووسائط الجرف':'1.2 Flushing Systems & Hole Cleaning (7-10)';
+    document.querySelector('[data-fluid-section-title]').textContent=lang==='ar'?'أنظمة تنظيف الحفرة واختيار وسط التنظيف':'Flushing Systems, Hole Cleaning & Media Selection';
+    document.querySelector('[data-fluid-section-desc]').textContent=lang==='ar'?'سرعة الهواء وتدفقه وهندسة تنظيف الحفرة، مع مؤشرات اختيار وسط الحفر المتاح (المعادلات 7-10)':'Air velocity, airflow, hole-cleaning geometry, and selection indicators for the flushing medium available on site (Formulas 7-10)';
     document.querySelectorAll('[data-fluid-index]').forEach(el=>{const item=indexText[el.dataset.fluidIndex];if(item)el.innerHTML=item[lang]});
-    document.querySelector('[data-fluid-title]').textContent=lang==='ar'?'وسائط تنظيف ثقب الحفر':'Drilling Flush Media';
+    document.querySelector('[data-fluid-title]').textContent=lang==='ar'?'اختيار وسط تنظيف الحفرة':'Drilling Flush Medium Selection';
     document.querySelector('[data-fluid-intro]').textContent=lang==='ar'?'اختر بنفسك الوسط المتوفر والمتوافق مع جهازك. تحسب الأداة مؤشرات اختيارك ولا تقترح وسطًا بدلًا عنك.':'Choose the medium available and compatible with your rig. The tool calculates indicators for your selection and does not recommend a medium.';
     document.querySelector('[data-fluid-selection-heading]').textContent=lang==='ar'?'الوسط الذي اخترته':'Your selected medium';
     document.querySelector('[data-fluid-select-label]').textContent=lang==='ar'?'اختر وسط تنظيف الثقب':'Choose flushing medium';
