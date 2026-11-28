@@ -7805,8 +7805,8 @@ html[dir="rtl"] .result-value.ar-msg { font-size: 0.95rem; font-weight: 600; lin
   out.innerHTML=c.join('');const complete=defs[t].every(d=>Number.isFinite(v[d[0]])&&v[d[0]]>0);status.textContent=complete&&valid?'':(ar()?'أدخل القيم المطلوبة واجعل قطر الثقب أكبر من قطر الأنبوب.':'Enter the required values; borehole diameter must exceed pipe diameter.');
  }
  select.addEventListener('change',render);window.addEventListener('languageChanged',e=>{lang=e.detail?.lang==='ar'?'ar':'en';render()});const us=document.getElementById('unit-system-select');if(us)us.addEventListener('change',()=>{const next=us.value==='imperial'?'imperial':'metric';if(next===units)return;Object.keys(saved).forEach(t=>Object.keys(saved[t]).forEach(k=>{if(saved[t][k]==='')return;const n=Number(saved[t][k]),f=factors[k]||1;saved[t][k]=String(Number((next==='imperial'?n*f:n/f).toPrecision(8)))}));units=next;render()});render();
-+})();
-+</script>
+})();
+</script>
 </body></html>
 
 
